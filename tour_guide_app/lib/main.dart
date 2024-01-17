@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tour_guide_app/src/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:tour_guide_app/src/features/authentication/screens/splash_screen/splash_sceen.dart';
 import 'package:tour_guide_app/src/features/authentication/screens/welcome/login_screen.dart';
 // import 'package:tour_guide_app/src/features/authentication/screens/splash_screen/splash_sceen.dart';
 
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
     return  const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
+      // home: Onboarding(),    //<=uncomment this line.comment remaining two, to priveiw the onboaring screen
+      // home: SplashScreen(),  //<=uncomment  this line.comment remaining above two, to priveiw the splash screen
     );
   }
 }

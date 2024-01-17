@@ -23,11 +23,11 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //blue logo
-              Expanded(child:  Image(
+               Image(
                 image: const AssetImage(loginLogo),
                 width: size.width * 0.25,
                 height: size.height * 0.20,
-              )),
+              ),
               //welcome text
               
               const Text(
@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                     fontWeight: FontWeight.normal,
                     fontSize: 14),
               ),
-              const SizedBox(height: 10),
+               SizedBox(height: size.height*0.025),
               //form container
               Form(
                 child: Container(
@@ -206,7 +206,7 @@ class LoginScreen extends StatelessWidget {
                     ],
                   ))
             ],
-          )), ,
+          )), 
       ) 
     );
   }
