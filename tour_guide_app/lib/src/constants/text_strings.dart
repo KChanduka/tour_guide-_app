@@ -15,3 +15,9 @@ const String forgotPasswordMain = "Forget Password";
 const String forgotPasswordSub = "Enter you email or phone we will send the verification code to reset your password";
 const String resetPasswordMain = "Create new Password";
 const String resetPasswordSub = "Keep your account secure by creating a strong password";
+const String createAccountMain = "Create Account";
+const String createAccountSub = "Create Account";
+const String successfullMain = "Successfully";
+const String successfullsub1 = "created an account";
+const String successfullsub2 = "After this you can enjoy any place you want enjoy it!";
+

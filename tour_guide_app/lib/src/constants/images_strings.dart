@@ -35,3 +35,4 @@ const String loginLogo = "assets/logo/loginPagesLogo.png";
     const String facebook = "assets/images/login/facebook.png";
     const String google = "assets/images/login/google.png";
     const String apple = "assets/images/login/apple.png";
+    const String successfull =  "assets/images/login/successfull.png";

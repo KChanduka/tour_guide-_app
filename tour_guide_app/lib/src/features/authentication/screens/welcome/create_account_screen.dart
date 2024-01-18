@@ -3,13 +3,11 @@ import 'package:tour_guide_app/src/constants/colors.dart';
 import 'package:tour_guide_app/src/constants/images_strings.dart';
 import 'package:tour_guide_app/src/constants/sizes.dart';
 import 'package:tour_guide_app/src/constants/text_strings.dart';
-import 'package:tour_guide_app/src/features/authentication/screens/welcome/create_account_screen.dart';
-import 'package:tour_guide_app/src/features/authentication/screens/welcome/forgot_password_screen.dart';
 import 'package:tour_guide_app/src/features/authentication/screens/welcome/succesful_screen.dart';
 import 'package:tour_guide_app/src/utils/buttons/button.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class CreateAccount extends StatelessWidget {
+  const CreateAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +25,11 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //blue logo
-              Image(
-                image: const AssetImage(loginLogo),
-                width: size.width * 0.25,
-                height: size.height * 0.15,
-              ),
+              //  Image(
+              //   image: const AssetImage(loginLogo),
+              //   width: size.width * 0.25,
+              //   height: size.height * 0.15,
+              // ),
               //welcome text
 
               const Text(
@@ -60,18 +58,62 @@ class LoginScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      //email input
+                      //first name
                       TextField(
                         decoration: InputDecoration(
-                            labelText: "E-mail",
-                            hintText: "Enter your email",
+                            labelText: "First Name",
+                            hintText: "Enter your First Name",
                             border: OutlineInputBorder(
                                 borderRadius:
                                     BorderRadius.circular(inputBoxBR))),
                       ),
-                      const SizedBox(
-                        height: 10,
+
+                      SizedBox(
+                        height: size.height * 0.02,
                       ),
+
+                      //Last name
+                      TextField(
+                        decoration: InputDecoration(
+                            labelText: "Last Name",
+                            hintText: "Enter your Last Name",
+                            border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.circular(inputBoxBR))),
+                      ),
+
+                      SizedBox(
+                        height: size.height * 0.02,
+                      ),
+
+                      //Age
+                      TextField(
+                        decoration: InputDecoration(
+                            labelText: "Age",
+                            hintText: "Enter your Age",
+                            border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.circular(inputBoxBR))),
+                      ),
+
+                      SizedBox(
+                        height: size.height * 0.02,
+                      ),
+
+                      //Email
+                      TextField(
+                        decoration: InputDecoration(
+                            labelText: "Email",
+                            hintText: "Enter your Email",
+                            border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.circular(inputBoxBR))),
+                      ),
+
+                      SizedBox(
+                        height: size.height * 0.02,
+                      ),
+
                       //password input
                       TextField(
                           decoration: InputDecoration(
@@ -87,15 +129,18 @@ class LoginScreen extends StatelessWidget {
                       //forgot passwword text button
                       Container(
                         width: double.infinity,
-                        alignment: Alignment.bottomRight,
-                        child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ForgotPassword()));
-                            },
-                            child: const Text("Forgot your password?")),
+                        alignment: Alignment.bottomLeft,
+                        child: Row(
+                          children: [
+                            Checkbox(
+                              value: false,
+                              onChanged: (value) => "accept",
+                            ),
+                            TextButton(
+                                onPressed: () => " terms and conditions",
+                                child: Text("I accept terms and conditions"))
+                          ],
+                        ),
                       ),
                       //login button
                       Container(
@@ -105,19 +150,14 @@ class LoginScreen extends StatelessWidget {
                           //login button
                           child: ElevatedButton(
                             style: buttonPrimary,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Successfull()));
-                            },
+                            onPressed: () => " whatever",
                             // "Login" text container
                             child: Container(
                               width: double.infinity,
                               alignment: Alignment.center,
                               padding: const EdgeInsets.only(
                                   top: 13.0, bottom: 15.0),
-                              child: const Text("Login",
+                              child: const Text("Create Account",
                                   style: TextStyle(
                                     fontFamily: "Poppins",
                                     letterSpacing: 2.0,
@@ -129,83 +169,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              // or Loing wiht
-              SizedBox(
-                  width: double.infinity,
-                  height: size.height * 0.05,
-                  child: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Opacity(
-                          opacity: 0.8,
-                          child: Text("Or login with",
-                              style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: textSizeRegular,
-                              )))
-                    ],
-                  )),
-              //facebook gmail apple login
-              Container(
-                width: double.infinity,
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      //facebook buttton
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.circular(buttonPrimaryBR)),
-                        child: OutlinedButton.icon(
-                          onPressed: () => "",
-                          icon: Image(
-                            image: const AssetImage(facebook),
-                            width: size.width * 0.05,
-                          ),
-                          label: const Text(
-                            "Facebook",
-                            style: TextStyle(
-                                fontSize: textSizeSmall, color: textPrimary),
-                          ),
-                        ),
-                      ),
 
-                      //gmail button
-                      Container(
-                        margin:
-                            EdgeInsets.symmetric(horizontal: size.width * 0.02),
-                        child: OutlinedButton.icon(
-                          onPressed: () => "",
-                          icon: Image(
-                            image: const AssetImage(google),
-                            width: size.width * 0.05,
-                          ),
-                          label: const Text(
-                            "Gmail",
-                            style: TextStyle(
-                                fontSize: textSizeSmall, color: textPrimary),
-                          ),
-                        ),
-                      ),
-
-                      //apple button
-                      Container(
-                        child: OutlinedButton.icon(
-                          onPressed: () => "",
-                          icon: Image(
-                            image: const AssetImage(apple),
-                            width: size.width * 0.05,
-                          ),
-                          label: const Text(
-                            "Apple",
-                            style: TextStyle(
-                                fontSize: textSizeSmall, color: textPrimary),
-                          ),
-                        ),
-                      ),
-                    ]),
-              ),
               //create account
               Container(
                   width: size.width,
@@ -214,15 +178,20 @@ class LoginScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Doesn't have account on disccover?",
+                      const Text("Already have an account?",
                           style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: textSizeSmall,
                           )),
                       //create account button
                       TextButton(
-                        onPressed: () => "",
-                        child: const Text("Create Account",
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Successfull()));
+                        },
+                        child: const Text("Go Back",
                             style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontSize: textSizeSmall,
