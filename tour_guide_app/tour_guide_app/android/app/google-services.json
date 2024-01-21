@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "600970453827",
+    "project_id": "chanduka-63e44",
+    "storage_bucket": "chanduka-63e44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600970453827:android:c57f100faff27dccfd85f6",
+        "android_client_info": {
+          "package_name": "com.example.tour_guide_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkQ3BnSebB-ovaz7AJXrSDc4gKPw2EEGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
